@@ -1,0 +1,125 @@
+USE [dbPICC_20202]
+GO
+
+/****** Object:  Schema [projetoongback]    Script Date: 12/10/2020 16:36:35 ******/
+CREATE SCHEMA [projetoongback]
+GO
+
+
+/* TABELA 1 */
+
+CREATE TABLE Voluntário(
+        VoluntárioID INT NOT NULL,
+        CPF CHAR(11),
+        NOME VARCHAR(50),
+        EMAIL VARCHAR(50),
+        Idade Char(3),
+        UserINFO INT
+		UserINFO INTEGER
+)
+ALTER TABLE Voluntário
+ADD CONSTRAINT pkusuario PRIMARY KEY(VoluntárioID)
+
+
+/* TABELA 2 */
+
+CREATE TABLE UserInfo(
+        UserINFO INT NOT NULL,
+        Avaliação de outras ongs VARCHAR(500),
+        Outras ATIV feitas VARCHAR(500),
+)
+ALTER TABLE Sobre o usuário(Para ONG)
+ADD CONSTRAINT pkusuario PRIMARY KEY(VoluntárioID)
+
+
+/* TABELA 3 */
+
+CREATE TABLE Atividade(
+        AtivID INT NOT NULL,
+        VoluntárioID INTEGER 
+		OngID INTEGER
+		InfoID INTEGER
+)
+ALTER TABLE Atividade
+ADD CONSTRAINT pkusuario PRIMARY KEY(AtivID)
+
+
+/* TABELA 4 */ 
+
+CREATE TABLE Informações da Atividade(
+        InfoID INT NOT NULL,
+        Descrição VARCHAR(500),
+        LocalizaçãoID INTEGER,
+        dhID INTEGER
+)
+ALTER TABLE Informações da Atividade
+ADD CONSTRAINT pkusuario PRIMARY KEY(VoluntárioID)
+
+
+/* TABELA 5 */
+
+CREATE TABLE DataHora(
+        dhID INT NOT NULL,
+        Dat4 DATETIME
+		Horário TIME 
+		addinfo VARCHAR(500)
+)
+ALTER TABLE Datahora
+ADD CONSTRAINT pkusuario PRIMARY KEY(dhID)
+
+
+/* TABELA 6 */ 
+
+CREATE TABLE Localização(
+        LocalizaçãoID INT NOT NULL,
+		Rua VARCHAR(100)
+        CidadeID INTEGER
+)
+ALTER TABLE Localização
+ADD CONSTRAINT pkusuario PRIMARY KEY(LocalizaçãoID)
+
+
+/* TABELA 7 */
+
+CREATE TABLE Cidade(
+        CidadeID INT NOT NULL,
+        Nome VARCHAR(50)
+		EstadoID INTEGER
+)
+ALTER TABLE Cidade
+ADD CONSTRAINT pkusuario PRIMARY KEY(CidadeID)
+
+
+/* TABELA 8 */
+
+CREATE TABLE Estado(
+        EstadoID INT NOT NULL,
+        Nome VARCHAR(30)
+		UF CHAR(2)
+)
+ALTER TABLE Estado
+ADD CONSTRAINT pkusuario PRIMARY KEY(EstadoID)
+
+
+/* TABELA 9 */ 
+
+CREATE TABLE ONG(
+        ongID INT NOT NULL,
+        Nome VARCHAR(1100),
+        Nº de ID VARCHAR(50),
+        Ong INTEGER
+)
+ALTER TABLE ONG
+ADD CONSTRAINT pkusuario PRIMARY KEY(ongID)
+
+
+/* TABELA 10 */
+
+CREATE TABLE Informações da ONG(
+        OngIF INT NOT NULL,,
+        Área de atuação VARCHAR(100),
+        Tipos de atividades VARCHAR(100),
+)
+ALTER TABLE Informações da ONG
+ADD CONSTRAINT pkusuario PRIMARY KEY(OngIF)
+

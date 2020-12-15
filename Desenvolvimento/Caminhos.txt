@@ -1,0 +1,21 @@
+*Login
+-Formulario de cadastro (nome, CPF, telefone para contato e cidade)
+-Login comum (*pagina pós login)
+
+*Pagina pós login
+-Lista de projetos e atividades
+-Botão para cadastrar novo projeto (*cadastrando projeto)
+-Botão para entrar no projeto (*pagina do projeto)
+
+*Pagina do projeto
+-Informações da ong
+-Informações das atividades necessárias
+-Informações de locais, datas e horários
+-Botão para participar do projeto (ter uma mensagem de confirmação)
+-Botão para sair do projeto (ter uma mensagem de confirmação)
+-OBS: dps da data do projeto, deixar os botoes inativos
+
+*Cadastrando projeto
+-Formulário de cadastro de projeto (precisa ter alguma forma de comprovar
+que a ong existe mesmo)
+-Salvar Projeto (pegar base do meu trabalho para só quem fez conseguir editar)
